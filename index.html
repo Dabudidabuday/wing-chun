@@ -15,36 +15,44 @@
           <div class="line"></div>
           <div class="line"></div>
         </button>
-      
+
         <div class="modal__inner">
           <h4 class="modal__title">
             Пожалуйста, заполните форму ниже
           </h4>
-      
-          <form action="#" method="POST" name="sign-in">
+
+          <form
+            action="send.php"
+            method="POST"
+            name="sign-in"
+            enctype="multipart/form-data"
+          >
             <fieldset>
               <label>
                 Ваше имя <sub>*</sub>
-                <input type="text" required />
+                <input type="text" name="name" required />
               </label>
-      
+
               <label>
                 Ваш номер телефона <sub>*</sub>
-                <input type="tel" required />
+                <input type="tel" name="tel" required />
               </label>
-      
+
               <label>
                 Ваш Email <sub>*</sub>
-                <input type="email" required />
+                <input type="email" name="email" required />
               </label>
             </fieldset>
           </form>
         </div>
-        <input type="submit" value="ОТПРАВИТЬ" class="form__submit" />
+        <input
+          type="submit"
+          value="ОТПРАВИТЬ"
+          class="form__submit"
+          name="send"
+        />
       </div>
     </div>
-
-    
 
     <div class="intro__modal-video undisplay">
       <div class="modal__close" id="intro-close">
@@ -97,7 +105,7 @@
     <header class="main-header">
       <div class="flex-container ai-center jc-space-between full-height">
         <div class="main-header__address flex-row ai-center">
-          <span class="main-header__marker">
+          <!-- <span class="main-header__marker">
             <?xml version="1.0" encoding="UTF-8"?>
             <svg
               width="23px"
@@ -129,7 +137,7 @@
                 </g>
               </g>
             </svg>
-          </span>
+          </span> -->
           <p>г.Одесса, <span>ул. Ольгиевская 4а</span></p>
         </div>
 
@@ -137,17 +145,21 @@
           class="main-header__controls flex-row-vertical jc-center ai-center"
         >
           <div class="main-header__logo">
-            <img src="/images/main-header__logo.png" alt="" />
+            <img src="/images/logo.png" alt="" />
           </div>
         </div>
 
         <div class="main-header__tel flex-row ai-center jc-flex-end">
           <div class="main-header__tel-img">
-            <img src="images/tel.png" alt="" />
+            <!-- <img src="images/tel.png" alt="" /> -->
           </div>
-          <a href="tel:+380673031382"
-            >+38 <span class="text-accent">(067)</span> 303 13 82</a
-          >
+          <a href="tel:+380673031382">
+            +38 <span class="text-accent">(067)</span> 303 13 82
+          </a>
+
+          <a href="tel:+380667725227">
+            +38 <span class="text-accent">(066)</span> 772 52 27
+          </a>
         </div>
       </div>
 
@@ -227,12 +239,12 @@
           </h1>
 
           <h2 class="intro__subtitle">
-            Мастера <span>Токана Игоря Владимировича.</span>
+            Мастера <span>Токана Игоря Владимировича</span>
           </h2>
 
           <div class="intro__buttons">
             <button
-              data-id="about"
+              data-id="style"
               id="intro__more"
               class="button button--more"
               type="button"
@@ -270,10 +282,11 @@
           </div>
 
           <p class="about__biography">
-            Токан Игорь Владимирович, родился и вырос в городе Одессе. Своё
-            изучение стиля Вин Чун начал в 1992 году. Имеет опыт преподавания
-            более 20 лет. За это время, воспитал ряд учеников, которые преподают
-            в Украине и за рубежом.
+            Токан Игорь Владимирович, вице-президент международной федерации
+            восточных боевых искусств «Вин Чун Куэн Пай», мастер 10 дана. Своё
+            изучение стиля Вин Чун начал в 1992 году. Опыт преподавания более 20
+            лет. За это время, воспитал ряд учеников, которые преподают в
+            Украине и за рубежом.
           </p>
         </div>
 
@@ -364,7 +377,7 @@
         <div class="health__description">
           <div class="health__description--left-side">
             <h4 class="health__description-title">
-              Изучайте цигун с нами и вы получите:
+              Занятия цигун вам помогут:
             </h4>
 
             <div class="health__description-image">
@@ -421,16 +434,13 @@
             </div>
 
             <h4 class="health__description-title">
-              Изучайте цигун с нами и вы получите:
+              Занятия цигун вам помогут:
             </h4>
             <ul class="health__description-list">
-              <li class="item">- крепкое здоровье</li>
-              <li class="item">- лишний вес уйдёт</li>
-              <li class="item">- Ваше настроение улучшиться</li>
-              <li class="item">- Ваш организм «Омолодиться»</li>
-              <li class="item">
-                - Вы станете более энергичными и оптимистичными
-              </li>
+              <li class="item">- укрепить здоровье</li>
+              <li class="item">- восстановиться после травм</li>
+              <li class="item">- избавиться от лишнего веса</li>
+              <li class="item">- стать более энергичным</li>
             </ul>
 
             <div class="health__description-image">
@@ -474,8 +484,6 @@
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
               >
-                <title>Group</title>
-                <desc>Created with Sketch.</desc>
                 <g
                   id="Page-1"
                   stroke="none"
@@ -559,7 +567,7 @@
     <section class="group" id="group">
       <div class="flex-container jc-space-around">
         <div class="group__image">
-          <img src="images/group-bg.png" alt="" />
+          <img src="images/group-bg.jpg" alt="" />
         </div>
 
         <div class="group__description">
@@ -573,8 +581,6 @@
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <title>Group</title>
-              <desc>Created with Sketch.</desc>
               <g
                 id="Page-1"
                 stroke="none"
@@ -627,7 +633,7 @@
           <ul class="group__description-list">
             <li class="item">- комфортабельный зал</li>
             <li class="item">- малокомплектные группы</li>
-            <li class="item">- индивидуальный и разумный подход к каждому</li>
+            <li class="item">- индивидуальный подход</li>
             <li class="item">- дружный коллектив</li>
           </ul>
 
@@ -662,13 +668,13 @@
         <div class="individual__description">
           <ul class="individual__description-list">
             <li class="item">
-              -максимальное погружение в «Вин Чун»
+              - максимальное погружение в занятие
             </li>
             <li class="item">
-              -постоянный контакт и работа с Мастером
+              - постоянный контакт и работа с Мастером
             </li>
             <li class="item">
-              -получение быстрого и устойчивого результата
+              - получение быстрого и устойчивого результата
             </li>
           </ul>
 
@@ -696,7 +702,7 @@
               </li>
               <li class="item">1 месяц — <span class="price">600грн.</span></li>
               <li class="item">
-                2 месяца — <span class="price">900грн.</span>
+                2 месяца — <span class="price">1100грн.</span>
               </li>
               <li class="item">
                 3 месяца — <span class="price">1500грн.</span>
@@ -751,13 +757,13 @@
               <span class="acccordion__icon">
                 <span id="faq-icon1">+</span>
               </span>
-              С какого возраста я могу начать заниматься?
+              Какую одежду и обувь мне необходимо взять с собой на тренировку?
             </button>
 
             <div class="accordion__answer" id="answer1" style="max-height: 0">
               <p>
-                Мы проводим тренировки в малокомплектных группах, есть группы
-                для детей от 6 лет. И стандартная группа с 12 лет.
+                Подойдут любые спортивные штаны, футболка и удобная пара сменной
+                обуви.
               </p>
             </div>
           </div>
@@ -767,13 +773,12 @@
               <span class="acccordion__icon">
                 <span id="faq-icon2">+</span>
               </span>
-              Контурная пластика, для кого?
+              С какого возраста я могу начать заниматься?
             </button>
 
             <div class="accordion__answer" id="answer2" style="max-height: 0">
               <p>
-                Мы проводим тренировки в малокомплектных группах, есть группы
-                для детей от 6 лет. И стандартная группа с 12 лет.
+                Занятия можно начинать в любом возрасте.
               </p>
             </div>
           </div>
@@ -783,13 +788,14 @@
               <span class="acccordion__icon">
                 <span id="faq-icon3">+</span>
               </span>
-              Контурная пластика, для кого?
+              Я никогда не занимался боевыми искусствами. Могу ли я заниматься
+              Вин Чун?
             </button>
 
             <div class="accordion__answer" id="answer3" style="max-height: 0">
               <p>
-                Мы проводим тренировки в малокомплектных группах, есть группы
-                для детей от 6 лет. И стандартная группа с 12 лет.
+                Да, заниматься Вин Чун может любой человек. Опыт и физическая
+                форма не важны.
               </p>
             </div>
           </div>
@@ -807,7 +813,7 @@
           </div>
 
           <div class="main-header__address">
-            <span class="main-header__marker">
+            <!-- <span class="main-header__marker">
               <?xml version="1.0" encoding="UTF-8"?>
               <svg
                 width="23px"
@@ -839,26 +845,34 @@
                   </g>
                 </g>
               </svg>
-            </span>
+            </span> -->
 
-            <p>г.Одесса, <span>ул. Ольгиевская 4а</span></p>
+            <p>г. Одесса, <span>ул. Ольгиевская 4а</span></p>
           </div>
 
           <div class="main-header__tel">
-            <div class="main-header__tel-img">
+            <!-- <div class="main-header__tel-img">
               <img src="images/tel.png" alt="" />
-            </div>
+            </div> -->
             <a href="tel:+380673031382"
               >+38 <span class="text-accent">(067)</span> 303 13 82</a
             >
+
+            <a href="tel:+380667725227"
+              >+38 <span class="text-accent">(066)</span> 772 52 27</a
+            >
           </div>
 
-          <ul class="contacts__socials-list">
+          <!-- <ul class="contacts__socials-list">
             <li class="item">
-              <a href=""><img src="images/whatsapp-icon.png" alt=""/></a>
+              <a href="whatsapp://send?phone=+380673031382"
+                ><img src="images/whatsapp-icon.png" alt=""
+              /></a>
             </li>
             <li class="item">
-              <a href=""><img src="images/viber-icon.png" alt=""/></a>
+              <a href="viber://add?number=+380673031382"
+                ><img src="images/viber-icon.png" alt=""
+              /></a>
             </li>
             <li class="item">
               <a href="https://www.youtube.com/channel/UCH5S2yf1r4DdfUBvX17RbTA"
@@ -868,7 +882,7 @@
             <li class="item">
               <a href=""><img src="images/instagram-icon.png" alt=""/></a>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <div class="contacts__map">
           <img src="images/map.png" alt="" />
@@ -879,7 +893,7 @@
     <footer class="main-footer">
       <div class="flex-container ai-center jc-space-between">
         <div class="footer__logo">
-          <img src="images/footer-logo.png" alt="" />
+          <img src="images/logo.png" alt="" />
         </div>
 
         <div class="footer__copyrights">
@@ -926,16 +940,13 @@
           form.classList.add("undisplay");
         });
 
-        window.onclick = function (event) {
-          
+        window.onclick = function(event) {
           if (event.target == overlay) {
             overlay.classList.add("undisplay");
             form.classList.add("undisplay");
           }
-        }
+        };
       };
-
-      
 
       /**
        * @method SendModalForm
@@ -949,7 +960,7 @@
       };
 
       //Send modal Form
-      sendForm(modalSignIn);
+      // sendForm(modalSignIn);
 
       //OPEN modal Forms
       openModalForm(signBtn, modalSignIn);
@@ -1006,12 +1017,9 @@
       };
 
       const modalVideoClose = function(button, video) {
-        
-
         button.addEventListener("click", function() {
           const iframe = document.querySelector(".intro__iframe");
           if (iframe) {
-            
             video.removeChild(iframe);
           }
           overlay.classList.add("undisplay");
@@ -1022,7 +1030,7 @@
       openVideoModal(
         introPlay,
         introVideo,
-        "https://www.youtube.com/embed/M0xYcWvcxI8?autoplay=1"
+        "https://www.youtube.com/embed/Ev92DX9HlXI?autoplay=1"
       );
       openVideoModal(
         combatPlay,
@@ -1032,7 +1040,7 @@
       openVideoModal(
         individualPlay,
         individualVideo,
-        "https://www.youtube.com/embed/Ev92DX9HlXI?autoplay=1"
+        "https://www.youtube.com/embed/M0xYcWvcxI8?autoplay=1"
       );
 
       modalVideoClose(introCloseBtn, introVideo);

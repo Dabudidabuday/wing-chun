@@ -18,7 +18,7 @@
       color: #fff;
       font-size: 48px;
       text-transform: initial;
-      font-weight: 800;
+      // font-family: $fontBlack;
 
       @media screen and (max-width: 702px) {
         font-size: 40px;
@@ -46,6 +46,10 @@
     padding-bottom: 150px;
   }
 
+  @media screen and(max-width: 500px) {
+    padding-bottom: 180px;
+  }
+
   @media screen and(max-width: 448px) {
     padding-bottom: 200px;
   }
@@ -71,10 +75,11 @@
 
     @media screen and(max-width: 430px) {
       top: 15%;
-      width: 320px;
+      width: 310px;
+      min-width: 310px;
 
       .play-text {
-        width: 320px;
+        width: 310px;
         display: inline-block;
         text-align: center;
       }

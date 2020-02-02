@@ -12,7 +12,7 @@
 
 .accordion__link {
   display: flex;
-  align-items: center;
+  align-items: left;
   color: $black;
   font-size: 22px;
   font-family: $fontBold;
@@ -21,6 +21,7 @@
   outline: 0;
   background: transparent;
   cursor: pointer;
+  align-items: center;
 
   &.expanded {
     .acccordion__icon {
@@ -46,8 +47,20 @@
     }
   }
 
-  @media screen and(max-width: 480px) {
+  @media screen and(max-width: 600px) {
+    font-size: 20px;
+  }
+
+  @media screen and(max-width: 500px) {
     font-size: 18px;
+  }
+
+  @media screen and(max-width: 445px) {
+    font-size: 16px;
+  }
+
+  @media screen and(max-width: 380px) {
+    font-size: 14px;
   }
 }
 
@@ -62,6 +75,30 @@
   p {
     color: $black;
     padding-bottom: 60px;
+  }
+
+  @media screen and(max-width: 670px) {
+    padding-left: 20px;
+
+    p {
+      padding-bottom: 40px;
+    }
+  }
+
+  @media screen and(max-width: 600px) {
+    font-size: 16px;
+
+    p {
+      padding-bottom: 30px;
+    }
+  }
+
+  @media screen and(max-width: 500px) {
+    font-size: 14px;
+  }
+
+  @media screen and(max-width: 445px) {
+    font-size: 14px;
   }
 }
 
